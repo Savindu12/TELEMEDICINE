@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "project-medichain-391006",
+  "private_key_id": "693f096233a57f0fec18628e5d2cc708e3ce216c",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQCpw5fjqxgw3VWy\n7pxYw6ihgjVLzgeoaZRdtE4EUiGKw9XsgC6kdiPSRCKWcEpx/z0VBU1uhv9beuHZ\nSr2H8mdsnFtvt164AtNm67mw+1OVY4GDKmDekYRQOBxH18WVnYEAwXG8dn0eeo3Z\nlfQ2VTKcKZsCsr5bluSQJ2TBLGLryev63EtjU/CBD/GjsSKxfknZOE355cWgR1U8\n6vPNOkUr7KqZW59/u5/B8VO4QmSill3btu8zTRfO9h6Pbl45Yj306uvhZ1SSLpKZ\ngz1S4+ckmJl916sTR07idtpVw0D4oKGsWOrgX8vJLJddQ5W/Xygj/NgvwFdGKLOD\nDp4eATpFAgMBAAECggEALWAPQBYiMCVo25u1hHA/qXOxJSLbnyMhOe6Qj80YFAwG\nKOGWFfVR28jEaet3qoKrY+v351wD8wKkTT0R7b1X8YrVUcX0dkCjGrZU+r4ieCKR\nomp4W+UPNZXZ0UYWFMh1i6so6FPPW48sTQUssj0RevYP7aezA64QR4uP/aYMhrMR\nUNRooxoyPi69NnM4lg4Y7dUHlW0ILNH+eceMKxNYQV0bWHFsMSIROIWulzA3Csq5\nEI+6OlKA3+vq1QbRWRg/ZM+PTx9ZlgZ5O391R4bhG1votJvIOUoFDVqUKvg7YtZM\nXH1Lyp4Nm//6D64tK9+7Wks3Yamh20utoCIn2Y0mHQKBgQDdSghhWNmjAMS4WLnB\nvD2gzk9AFIvaQL6kVPX+izmCpkgbQ1HViwFz/Wnk+mSK+5VUPFou/NgJBb88V44T\ne5jyFeaSkey7Lprj9rAWMd8U90l6wrCmYcyt4+mKnDebr5X35/ju2UvizKl8od17\nKigyw9ssB0qqkVS3SwLItwUUGwKBgQDEZIt2xRdUQxbPlZS7LuG2AbB2GrbFN5rh\nsTJLmuUL0UCWVA3Xp/f/zI3CSz+4JDkz5dI9JnkaYjNhO4ypvG7evqlUK7y0Sd6M\nP7M1hjxU7aYLn10FWZHrUU3RpzaVtJQud/2Yri5JJe9wnHEvBxOh2p7zn8Vuq11g\nSUtczwoRHwKBgBK0w2iXPi6NThPXTDyYUQ1a41AjbH8Sogr6M6FE26Ozsry7QBux\nGHpZna4BjKZDBiiMwYLfVNPObJAJRrVW6WLtfwQ82aopEmba35/Ar37yOH/sHUqz\nUb4RWhihhAHhIehG78AhFk0hx+IFPNfAhI1mCQz7wNASYPrtmFqnPgKpAoGATJkO\nkBdU/wdfqT0lElC5tfw4sAfBS3Bhly8+d6CFPzOxJjDIaVlY78r/a01gH9j4+pXj\nhvgveavdcEoCld0pvPTOJEcexY6eH0NlCTY+57z860GPzVte/1HpsSCvuHoC5ZDl\nNxyQbvU9y0UpG/d9n74eCtVA8uYheEF+BEe4HG8CgYBHjLOMLCf/bfu+3wX7GONL\nbd8cChpJI9/NJgaOvEM3aNVWAQ1jnm9QV8is6vQdAtan+DcWdUswTRxajQ1U+0Uh\n5IPnThkTTm+t2jkx44bmJkCprS4wd0MCdTSSTvSmPZ3xuqkzKwzggzBT6FRO4xZO\nL+dxJQACmu/o3ISQfaotNg==\n-----END PRIVATE KEY-----\n",
+  "client_email": "voiceauth@project-medichain-391006.iam.gserviceaccount.com",
+  "client_id": "112338852336156662026",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/voiceauth%40project-medichain-391006.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
