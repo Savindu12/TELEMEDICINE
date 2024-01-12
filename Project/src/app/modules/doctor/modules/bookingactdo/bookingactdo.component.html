@@ -1,0 +1,9 @@
+<div class="relative p-6 w-[23rem]" *ngIf="recievedRow">
+    <h1 class="text-3xl font-bold">Accept Your Patient</h1>
+    <p class="text-lg text-gray-500">Are you sure you want to Accept <span>{{recievedRow.patientName}}</span> as your Patient?</p>
+    <div class="flex flex-row mt-6 space-x-2 justify-evenly">
+        <button (click)="acceptPatient(recievedRow.patientID)" class="w-full py-3 text-sm font-medium text-center text-white transition duration-150 ease-linear bg-green-600 border border-green-600 rounded-lg hover:bg-green-500">Accept Patient</button>
+        
+        <button (click)="cancelBook()" x-on:click="modal = ! modal" class="w-full py-3 text-sm text-center text-gray-500 transition duration-150 ease-linear bg-white border border-gray-200 rounded-lg hover:bg-gray-100">Cancel</button>
+    </div>
+</div>

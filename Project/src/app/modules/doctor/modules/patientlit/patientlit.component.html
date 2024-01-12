@@ -1,0 +1,54 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+</head>
+
+<!-- <div class="bg-white pt-6 sm:pt-8 lg:pt-12" >
+  <div class="mx-auto max-w-screen-2xl px-4 pb-4 md:px-8">
+    <div class="relative flex flex-wrap rounded-lg bg-green-500 px-4 py-3 shadow-lg sm:flex-nowrap sm:items-center sm:justify-center sm:gap-3 sm:pr-8 md:px-8">
+      <div class="order-1 mb-2 inline-block w-11/12 font-normal font-['Maven Pro'] tracking-widest leading-loose max-w-screen-sm text-xl text-white sm:order-none sm:mb-0 sm:w-auto md:text-base">No Patients Available Now !</div>
+    </div>
+  </div>
+</div> -->
+
+<div class="w-full" >
+  <div class=" pt-8 mx-5">
+    <span class="text-2xl font-semibold font-bold font-['Maven Pro'] tracking-widest leading-loose">Booking Activity Details</span>
+  </div>
+<div class="overflow-hidden rounded-lg border border-gray-200 shadow-md m-5" >
+<table class="w-full border-collapse bg-white text-left text-lg text-gray-500">
+  <thead class="bg-gray-50">
+    <tr>
+      <th scope="col" class="px-6 py-4 font-medium text-gray-900">First Name</th>
+      <th scope="col" class="px-6 py-4 font-medium text-gray-900">Last Name</th>
+      <th scope="col" class="px-6 py-4 font-medium text-gray-900">Age</th>
+      <th scope="col" class="px-6 py-4 text-center font-medium text-gray-900">Action</th>
+    </tr>
+  </thead>
+  <tbody class="divide-y divide-gray-100 items-center border-gray-100" >
+    <tr class="hover:bg-gray-50 justify-center" *ngFor="let patient of patientList   ">
+      <td class="px-6 py-4">
+        {{ patient.first_name}}
+      </td>
+      <td class="px-6 py-4">
+        {{ patient.last_name}}
+      </td>
+      <td class="px-6 py-4">
+        {{ patient.age}}
+      </td>
+      <td class="px-6 py-4">
+        <div class="flex justify-center gap-4" >
+          <button (click)="AcceptPatientPopup(patient.first_name, patient.id)"  class="border rounded-3xl p-5 py-1 bg-green-600 hover:bg-green-500 text-white" >Accept Patient</button>
+        </div>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+  
+  </html>

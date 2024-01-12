@@ -1,0 +1,59 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+</head>  
+
+           <div class="w-full">
+            <div class=" pt-8 mx-5">
+              <span class="text-2xl font-semibold font-bold font-['Maven Pro'] tracking-widest leading-loose">Document Details</span>
+            </div>
+        <div class="overflow-hidden rounded-lg border border-gray-200 shadow-md m-5" >
+          <table class="w-full border-collapse bg-white text-left text-lg text-gray-500">
+            <thead class="bg-gray-50">
+              <tr>
+                <th scope="col" class="px-6 py-4 font-medium text-gray-900">First Name</th>
+                <th scope="col" class="px-6 py-4 font-medium text-gray-900">Last Name</th>
+                <th scope="col" class="px-6 py-4 font-medium text-gray-900">Specialist</th>
+                <th scope="col" class="px-6 py-4 font-medium text-gray-900">Booked Date</th>
+                <th scope="col" class="px-6 py-4 font-medium text-gray-900">Booked Time</th>
+                <th scope="col" class="px-6 py-4 font-medium text-gray-900">Documents</th>
+                <th scope="col" class="px-6 py-4 text-center font-medium text-gray-900">Action</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-gray-100 items-center border-gray-100" >
+              <tr class="hover:bg-gray-50" *ngFor="let doctor of doctors">
+                <td class="px-6 py-4">
+                  {{doctor.first_name}}
+                </td>
+                <td class="px-6 py-4">
+                  {{doctor.last_name}}
+                </td>
+                <td class="px-6 py-4">
+                  {{doctor.specialist}}
+                </td>
+                <td class="px-6 py-4" *ngFor="let details of bookDetails">
+                  {{details.date | date:'dd/MM/yyyy'}}
+                </td>
+                <td class="px-6 py-4" *ngFor="let details of bookDetails">
+                  {{details.time}}
+                </td>
+                <td class="px-6 py-4" *ngFor="let details of bookDetails">
+                  <button (click)="openDocumentDialog(details.patientID)" class="mr-4 text-gray-500 hover:underline md:mr-6 dark:text-gray-400">View Documents</button>
+                </td>
+                <td class="px-6 py-4" *ngFor="let details of bookDetails">
+                  <div class="flex justify-center gap-4" >
+                    <button (click)="openPatientDialog(details.bookDoctorID)" class="border rounded-3xl p-5 py-1 bg-green-600 hover:bg-green-500 text-white" >Share Files</button>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+        
+
+ </html>

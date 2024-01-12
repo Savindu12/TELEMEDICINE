@@ -1,0 +1,18 @@
+
+<div class="max-w-lg mx-auto bg-white p-8 rounded-xl" style="width: 50rem;">
+    <div class="flex flex-row justify-between items-center">
+        <div>
+            <h1 class="text-3xl font-medium">Booked Patient list</h1>
+        </div>
+    </div>
+    <p class="text-slate-500">Send your meeting ID with patients.</p>
+
+    <div id="tasks" class="my-5" *ngFor="let details of patientsList" >
+        <div id="task" class="flex justify-between items-center border-b border-green-200 py-3 px-2 border-l-4  border-l-transparent bg-gradient-to-r from-transparent to-transparent hover:from-green-100 transition ease-linear duration-150 hover:cursor-pointer">
+            <button (click)="submitPatientID(details.id)" class="inline-flex items-center space-x-3">
+                    <div>{{details.first_name}} {{details.last_name}}</div>
+            </button>
+            
+        </div>
+    </div>
+</div>

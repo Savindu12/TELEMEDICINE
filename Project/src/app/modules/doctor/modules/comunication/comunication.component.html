@@ -1,0 +1,84 @@
+<!-- <div class="p-10 main-container-width-with-header items-center bg-purple-100 flex " >
+    <div class="row">
+      <div class="col-md-6">
+        <span>PeerId: {{peerId}}</span> 
+        <span class ="ml-2">{{patientFirstname}}</span>
+        <div style="width: 400px; height: 300px; border: 2px solid" id="remote-video"></div>
+        
+        <br>
+        <div  class="flex justify-between" >
+          <input class="mt-8" type="text" placeholder="Peer Id" [(ngModel)]='peerIdShare'/>
+          <button class="button  mt-8  "  (click)="connectWithPeer()"> <fa-icon [icon]="phone" class="h-8 w-8 text-green-600"></fa-icon></button>
+     
+          
+          <button class="mt-5   mt-8"  (click)="stopCall()"><fa-icon [icon]="phoneSlash" class="h-8 w-8 text-green-600"></fa-icon></button>
+
+
+          
+          <div class="flex   mt-1 ">
+            <button routerLink="/doctor"    routerLinkActive="active-link"    class=" mt-8" ><fa-icon [icon]="back" class="h-8 w-8 text-green-600"></fa-icon></button>
+
+           
+          </div>
+
+        </div>
+      </div>
+      <br> <br>
+      <div class="flex justify-between">
+   <form (ngSubmit)="sendPatientRequest(doctorIdInput.value)">
+    <h2>Send Patient Request</h2>
+   
+    <input class="mt-5 " #doctorIdInput name="doctorId" [(ngModel)]="doctorId" placeholder="Peer ID">
+  
+
+    <button class="border rounded p-5 py-1 mt-1 bg-purple-300 text-black-400 " type="submit">Send Request</button>
+   
+  </form>
+</div>
+    </div>
+  </div> -->
+
+  <div class="items-center bg-white p-10 w-full">
+    <h1 class="text-center text-2xl font-semibold text-gray-500">Connect with Your Patient</h1>
+    <span class="text-center block mt-3 text-gray-400 text-xl font-semibold">Your ID: <span class="mr-4">{{peerId}}</span>
+     <button type="submit" (click)="openPatient(peerId)" class="bg-green-500 space-x-4 text-green-50 font-semibold px-6 py-2 rounded-xl text-md">
+      Send 
+    </button> 
+  </span>
+    <div class="flex flex-wrap justify-center mt-10 space-x-3">
+      <div id="video-id" style="width: 500px; height: 300px; border: 2px solid; background-image: url(../../../../../assets/video-placeholder.jpg); background-size: cover;" class="rounded-lg"></div>
+    </div>
+    <div class="pt-16">
+      <div class="flex justify-center border-2 py-2 px-6 rounded-xl space-x-3">
+        <input class="w-full outline-none text-gray-700 text-lg" type="text" placeholder="Paste Your doctor ID"  [(ngModel)]='peerIdShare'/>
+        <div class="flex justify-center space-x-3 px-3 py-2"  *ngIf="meetingActive == false" >
+          <button type="submit" (click)="connectWithPeer()" class="bg-green-500 text-green-50 font-semibold px-6 py-2 rounded-xl text-md">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
+          </svg>
+        </button>
+        </div>
+        <div class="flex justify-center space-x-3 px-3 py-2"  *ngIf="meetingActive == true">
+          <button type="submit" class="bg-red-500 text-red-50 font-semibold px-6 py-2 rounded-xl text-md">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.348a1.125 1.125 0 010 1.971l-11.54 6.347a1.125 1.125 0 01-1.667-.985V5.653z" />
+            </svg>    
+          </button>
+        
+          <button type="submit" class="bg-red-500 text-red-50 font-semibold px-6 py-2 rounded-xl text-md">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 5.25v13.5m-7.5-13.5v13.5" />
+            </svg>                        
+          </button>
+          
+          <button type="submit" (click)="stopCall()" class="bg-red-500 text-red-50 font-semibold px-6 py-2 rounded-xl text-md">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 3.75L18 6m0 0l2.25 2.25M18 6l2.25-2.25M18 6l-2.25 2.25m1.5 13.5c-8.284 0-15-6.716-15-15V4.5A2.25 2.25 0 014.5 2.25h1.372c.516 0 .966.351 1.091.852l1.106 4.423c.11.44-.054.902-.417 1.173l-1.293.97a1.062 1.062 0 00-.38 1.21 12.035 12.035 0 007.143 7.143c.441.162.928-.004 1.21-.38l.97-1.293a1.125 1.125 0 011.173-.417l4.423 1.106c.5.125.852.575.852 1.091V19.5a2.25 2.25 0 01-2.25 2.25h-2.25z" />
+            </svg>              
+          </button>
+        </div>
+      </div>
+
+      <!-- <span class="text-center block mt-6 text-gray-400 text-xl font-semibold">Text must be at leat 10 characters</span> -->
+    </div>
+  </div>

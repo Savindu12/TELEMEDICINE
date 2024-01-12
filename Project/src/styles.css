@@ -1,0 +1,20 @@
+/* You can add global styles to this file, and also import other style files */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+/* @import "~@fortawesome/fontawesome-free/css/all.css"; */
+@import '@angular/material/prebuilt-themes/indigo-pink.css';
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.mat-dialog-container{
+    background-color: transparent;
+    box-shadow: none;
+}
+
+.mat-dialog-contain{
+    background-color: transparent;
+    box-shadow: none;
+    height: 40rem;
+}

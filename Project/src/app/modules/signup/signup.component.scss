@@ -1,0 +1,100 @@
+.password-container {
+    position: relative;
+    margin-top: 3px;
+  }
+  
+.email-container {
+  position: relative;
+  margin-bottom: 5px;
+}
+
+.name-container {
+  position: relative;
+  margin-bottom: 5px;
+}
+  .password {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+  }
+
+  .microphone {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+  }
+
+  .audio-record-content{
+    max-width:500px;
+    margin:10rem auto;
+  }
+
+  .audio-record{
+    height:60px;
+    background:rgb;
+    border-radius: 30px;
+    margin-top: 30px;
+    display: flex;
+  }
+
+  .audio-file{
+    display: flex;
+    width:60px;
+    margin-top: 12px;
+ }
+
+ .audio-container {
+  position: relative;
+  margin: 10px;
+}
+.record-container {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  display: block;
+}
+[holdable] {
+  outline:0;
+  cursor: pointer;
+  border: none;
+  background: green;
+  color: white;
+  width: 60px; 
+  height: 60px;
+  position: absolute;
+  display: block;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+  left: 0;
+  right: 0;
+  top: 0;
+  margin: 0 auto;
+}
+
+.rtc-dev{
+  display: flex;
+  height: 100%;
+  position: fixed;
+  right: 0;
+  left: 0;
+  align-items: center;
+  .btn-div{
+      width: 100%;
+      text-align: center;
+      button{
+          width: 100px;
+          height: 100px;
+          border-radius: 100px;
+          outline: none;
+          border: none;
+          cursor: pointer;
+          background-color: #ff7267;
+      }
+  }
+  audio{
+      outline: none;
+  }
+}

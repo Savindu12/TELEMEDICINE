@@ -1,0 +1,16 @@
+.table-with-border {
+    border-collapse: collapse;
+    border: 1px solid #ccc;
+    width: 100%;
+  }
+  
+  /* Or inline styles */
+  :host ::ng-deep .table-with-border {
+    border-collapse: collapse;
+    border: 1px solid #ccc;
+    width: 100%;
+  }
+
+  .item-center {
+    text-align: center;
+  }

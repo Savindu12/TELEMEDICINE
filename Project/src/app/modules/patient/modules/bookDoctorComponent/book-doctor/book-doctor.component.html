@@ -1,0 +1,18 @@
+
+            <div class="relative p-6 w-[23rem]" *ngIf="recievedRow">
+                <h1 class="text-3xl font-bold">Book Your Doctor</h1>
+                <p class="text-lg text-gray-500">Are you sure you want to Book Dr.<span>{{recievedRow.doctorName}}</span> as your doctor?</p>
+
+                <div class="mb-2">
+                    <label for="category" class="block font-medium text-gray-700">Select Coin</label>
+                    <select id="category" name="category" formControlName="categoryname"
+                      class="mt-1 block w-60 py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm">
+                      <option  *ngIf="patientWallet | async as patientWallet" [value]="patientWallet.price">{{patientWallet.price}}</option>
+                    </select>
+                </div>
+
+                <div class="flex flex-row mt-6 space-x-2 justify-evenly">
+                    <button  *ngIf="patientWallet | async as patientWallet" (click)="bookDoctor(recievedRow.doctorID, recievedRow.patientID, patientWallet.id)" class="w-full py-3 text-sm font-medium text-center text-white transition duration-150 ease-linear bg-green-600 border border-green-600 rounded-lg hover:bg-green-500">Book Now</button>
+                    <button (click)="cancelBook()" x-on:click="modal = ! modal" class="w-full py-3 text-sm text-center text-gray-500 transition duration-150 ease-linear bg-white border border-gray-200 rounded-lg hover:bg-gray-100">Cancel</button>
+                </div>
+            </div>

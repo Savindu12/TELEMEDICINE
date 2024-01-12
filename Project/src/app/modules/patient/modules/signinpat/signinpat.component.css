@@ -1,0 +1,12 @@
+  
+.email-container {
+    position: relative;
+    margin-bottom: 2px;
+  }
+
+  .microphone {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+  }

@@ -1,0 +1,208 @@
+
+<!-- <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+ 
+</head>
+<div class="py-[5.7rem] relative" style="background-image: linear-gradient(115deg, hsla(288, 93%, 78%, 0.486), rgb(218, 218, 218))">
+<div class="widescreen:section-min-height tallscreen:section-min-height mb-12 flex scroll-mt-12 flex-col-reverse items-center justify-center gap-8 p-6 sm:flex-row" >
+<div class="flex">
+  <article class="sm:w-1/2">
+  <div class="pl-10 mt-16 w-3/3">
+    <h1 class="text-6xl font-bold text-black-700 pb-10 w-3/4">
+      We Are Providing Best <span class="text-blue-500">Health</span> Service
+    </h1>  
+
+<div class="mx-auto space-x-4  ">
+    <button  routerLink="/signup"    routerLinkActive="active-link"  class="py-2 px-10 text-white rounded-lg hover:bg-blue-700 bg-blue-500">Sign up</button>
+    
+      <button routerLink="signin-selector"    routerLinkActive="active-link"    class="py-2 px-10 text-white rounded-lg hover:bg-blue-700 bg-blue-500" >Sign in</button>
+</div>
+  </div>
+</article>
+
+<div class="w-full lg:w-8/12 flex flex-col items-center rounded-lg  justify-center shadow-lg p-12 bg-no-repeat bg-cover bg-center" style="background-image: linear-gradient(115deg, #b37fd47c, hsl(0, 0%, 100%))" >
+      <img class=" flex flex-col lg:flex-row   h-80  mx-auto rounded-lg  " src="/assets/3836182.jpg" alt="">
+</div>
+      </div>
+  </div>
+
+</div>
+</html> -->
+
+
+                                        <!--
+    add this to your stylesheet 
+    
+    @layer components {
+        .navbar-active .hamburger div:first-child {
+        @apply rotate-45 translate-y-1.5;
+        }
+        .navbar-active .hamburger div:last-child {
+        @apply -rotate-45 -translate-y-1;
+        }
+        .navbar-active div:first-child div:first-child div:last-child{
+            @apply block lg:flex
+        }
+    }
+-->
+
+<style>
+  /*remove custom style*/
+    .circles{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+  }
+    .circles li{
+      position: absolute;
+      display: block;
+      list-style: none;
+      width: 20px;
+      height: 20px;
+      background: rgba(6, 242, 108, 0.2);
+      animation: animate 25s linear infinite;
+      bottom: -150px;  
+  }
+  .circles li:nth-child(1){
+      left: 25%;
+      width: 80px;
+      height: 80px;
+      animation-delay: 0s;
+  }
+   
+   
+  .circles li:nth-child(2){
+      left: 10%;
+      width: 20px;
+      height: 20px;
+      animation-delay: 2s;
+      animation-duration: 12s;
+  }
+   
+  .circles li:nth-child(3){
+      left: 70%;
+      width: 20px;
+      height: 20px;
+      animation-delay: 4s;
+  }
+   
+  .circles li:nth-child(4){
+      left: 40%;
+      width: 60px;
+      height: 60px;
+      animation-delay: 0s;
+      animation-duration: 18s;
+  }
+   
+  .circles li:nth-child(5){
+      left: 65%;
+      width: 20px;
+      height: 20px;
+      animation-delay: 0s;
+  }
+   
+  .circles li:nth-child(6){
+      left: 75%;
+      width: 110px;
+      height: 110px;
+      animation-delay: 3s;
+  }
+   
+  .circles li:nth-child(7){
+      left: 35%;
+      width: 150px;
+      height: 150px;
+      animation-delay: 7s;
+  }
+   
+  .circles li:nth-child(8){
+      left: 50%;
+      width: 25px;
+      height: 25px;
+      animation-delay: 15s;
+      animation-duration: 45s;
+  }
+   
+  .circles li:nth-child(9){
+      left: 20%;
+      width: 15px;
+      height: 15px;
+      animation-delay: 2s;
+      animation-duration: 35s;
+  }
+   
+  .circles li:nth-child(10){
+      left: 85%;
+      width: 150px;
+      height: 150px;
+      animation-delay: 0s;
+      animation-duration: 11s;
+  }
+    @keyframes animate {
+   
+      0%{
+          transform: translateY(0) rotate(0deg);
+          opacity: 1;
+          border-radius: 0;
+      }
+   
+      100%{
+          transform: translateY(-1000px) rotate(720deg);
+          opacity: 0;
+          border-radius: 50%;
+      }
+   
+  }
+  </style>
+  
+<app-header></app-header>
+<body class="bg-white dark:bg-gray-900">
+  <div class="relative w-full overflow-hidden">
+      <div class="min-h-screen flex dark:from-gray-900 bg-gradient-to-b from-white to-green-50">
+          <div class="container m-auto px-6 py-20 md:pb-0 md:pt-40 md:px-12 lg:py-0 lg:px-10">
+              <div class="flex flex-wrap gap-12">
+                  <div class="lg:w-6/12 lg:pt-32 lg:pb-20">
+                    <ul class="circles">
+                      <li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li>
+                   </ul>
+                      <div class="space-y-8 mt-8 lg:-mr-24 xl:-mr-0">
+                        <div class="relative col-span-1">
+                          <span class="font-bold text-5xl sm:text-6xl md:text-7xl xl:text-8xl dark:text-white">A Solution for every <span
+                                  class="text-cyan-800 dark:text-green-400 ">Concern</span>.</span>
+                          <div class="mt-8 lg:mt-16 space-y-8">
+                              <p class="text-gray-700 dark:text-gray-300 text-xl font-['Maven Pro'] tracking-widest leading-loose">Our specialized team is fully equipped to assist you with any inquiries you may have throughout the application process. </p>
+                          </div>
+                      </div>
+                          <div class="flex flex-col sm:flex-row gap-4">
+                              <button routerLink="/signup" title="Start buying" class="w-full py-3 px-12 rounded-xl text-center transition bg-green-600 hover:bg-green-700 active:bg-green-800 focus:bg-green-500 sm:w-max">
+                                  <span class="block text-white font-semibold">
+                                     Sign Up
+                                  </span>
+                              </button>
+                              <button type="button" routerLink="services" routerLinkActive="active-link" title="Start buying" class="w-full py-3 px-6 rounded-xl text-center transition dark:active:bg-green-900 dark:focus:bg-gray-800 active:bg-green-200 focus:bg-green-100 sm:w-max">
+                                  <div class="flex justify-center">
+                                      <span class="block text-green-700 dark:text-green-400 font-semibold">
+                                         Our Services
+                                      </span>
+                                  </div>
+                              </button>
+                          </div>
+                      </div>
+                  </div>
+
+                  <div class="hidden bottom-10 md:-right-32 md:block md:w-full md:ml-auto lg:absolute lg:-right-32 lg:w-[60%] xl:-right-60">
+                      <img src="/assets/home.png" class="ml-48 lg:ml-0" alt="gril on an horse" loading="lazy" width="540" height="750">
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</body>
+                                  
+                                  
